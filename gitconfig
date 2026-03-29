@@ -51,4 +51,11 @@
   rebase = false
 [user]
 	email = nzimalungi@gmail.com
-	name = Lungi Nzima
+	name = Lungelo Nzima
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[credential]
+	helper = osxkeychain
